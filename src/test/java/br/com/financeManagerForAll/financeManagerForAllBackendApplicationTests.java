@@ -1,4 +1,4 @@
-package br.com.financeManagerForAll.financeManagerForAllBackend;
+package br.com.financeManagerForAll;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

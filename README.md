@@ -22,3 +22,11 @@ The following guides illustrate how to use some features concretely:
 * [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
 * [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
 
+### Env Vars
+- MS_PORT = Any available port.
+- POSTGRES_DATABASE_URL = database adress. For local environment use 'localhost'
+- POSTGRES_DATABASE_CUSTOM_PORT = For local environment use '5432'
+- POSTGRES_DATABASE_NAME = financeManagerForAllDB. Check the docker-compose file
+- POSTGRES_DATABASE_SSL = For local environment use 'false'
+- POSTGRES_DATABASE_USERNAME = admin. Check the docker-compose file
+- POSTGRES_DATABASE_PASSWORD = fmfadb2023. Check the docker-compose file

@@ -1,7 +1,16 @@
 server:
   port: ${MS_PORT:8080}
+  error:
+    include-stacktrace: ON_PARAM
 
 spring:
+  datasource:
+    type: org.springframework.jdbc.datasource.DriverManagerDataSource
+    url: jdbc:postgresql://${POSTGRES_DATABASE_URL}:${POSTGRES_DATABASE_CUSTOM_PORT}/${POSTGRES_DATABASE_NAME}?useSSL=${POSTGRES_DATABASE_SSL}
+    username: ${POSTGRES_DATABASE_USERNAME}
+    password: ${POSTGRES_DATABASE_PASSWORD}
+    driverClassName: org.postgresql.Driver
+
   flyway:
     sql-migration-prefix: V
     sql-migration-separator: __
