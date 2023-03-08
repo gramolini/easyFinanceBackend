@@ -30,3 +30,8 @@ The following guides illustrate how to use some features concretely:
 - POSTGRES_DATABASE_SSL = For local environment use 'false'
 - POSTGRES_DATABASE_USERNAME = admin. Check the docker-compose file
 - POSTGRES_DATABASE_PASSWORD = fmfadb2023. Check the docker-compose file
+
+### Containers
+- PostgreSQL: dockerComposeFiles/database/docker-compose.yml
+- Jenkins: dockerComposeFiles/jenkins/docker-compose.yml
+    - Guide: https://www.jenkins.io/doc/book/installing/docker/
