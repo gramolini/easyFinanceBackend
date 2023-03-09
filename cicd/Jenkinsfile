@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Cleaning') {
             steps {
-                sh './mvn clean'
+                sh 'mvn clean'
             }
         }
         stage('Compiling') {
             steps {
-                sh './mvn compile'
+                sh 'mvn compile'
             }
         }
         stage('Installing') {
             steps {
-                sh './mvn install'
+                sh 'mvn install'
             }
         }
     }
