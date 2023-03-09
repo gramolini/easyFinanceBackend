@@ -4,9 +4,19 @@ pipeline {
         timeout(time: 15, unit: 'SECONDS')
     }
     stages {
-        stage('Reading parameters') {
+        stage('Cleaning') {
             steps {
-                echo BRANCH_NAME
+                mvn clean
+            }
+        }
+        stage('Compiling') {
+            steps {
+                mvn compile
+            }
+        }
+        stage('Installing') {
+            steps {
+                mvn install
             }
         }
     }
