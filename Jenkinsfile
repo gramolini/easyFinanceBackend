@@ -6,18 +6,18 @@ pipeline {
     stages {
         stage('Cloning repository') {
             steps {
-                sh 'git clone https://github.com/gramolini/financeManagerForAllBackend.git'
+                bat 'git clone https://github.com/gramolini/financeManagerForAllBackend.git'
             }
         }
         stage('Building') {
             steps {
-                sh './mvn clean'
-                sh './mvn package'
+                bat './mvn clean'
+                bat './mvn package'
             }
         }
         stage('Sending to cloud') {
             steps {
-                sh './mvn dockerfile:push'
+                bat './mvn dockerfile:push'
             }
         }
     }
