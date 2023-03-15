@@ -8,15 +8,8 @@ pipeline {
             steps {
                 sh 'mvn clean'
             }
-        }
-        stage('Compiling') {
             steps {
-                sh 'mvn compile'
-            }
-        }
-        stage('Installing') {
-            steps {
-                sh 'mvn install'
+                sh 'mvn package'
             }
         }
     }

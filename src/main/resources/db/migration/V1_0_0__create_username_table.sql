@@ -26,3 +26,30 @@ CREATE TABLE MANAGEMENT_USER_ROLE (
     MANAGEMENT_USER_ID UUID REFERENCES MANAGEMENT_USER(ID),
     MANAGEMENT_ROLE_ID UUID REFERENCES MANAGEMENT_ROLE(ID)
 );
+
+insert into MANAGEMENT_USER
+values (
+	'52ce77d3-347e-4ac5-8104-5eebf0e9ec48',
+	'admin',
+	'$2a$10$WBk5KW6fw3QxeIRUehqIUu2zSaxkRrJOVgoTytds8rGP70/juIvfq',
+	true,
+	true,
+	true,
+	true);
+
+insert into MANAGEMENT_USER
+values (
+	'ce3c98c4-46a5-4ddb-a5ca-3d3cfa3ab07e',
+	'victor.gramolini',
+	'$2a$10$WBk5KW6fw3QxeIRUehqIUu2zSaxkRrJOVgoTytds8rGP70/juIvfq',
+	true,
+	true,
+	true,
+	true);
+
+insert into MANAGEMENT_ROLE values ('5598ff90-469e-4e77-a376-4f1ce9f42034', 'ROLE_ADMIN');
+insert into MANAGEMENT_ROLE values ('c2b95591-e5fc-45ad-bf85-e0384fbf5b5c', 'ROLE_USER');
+
+insert into MANAGEMENT_USER_ROLE values ('52ce77d3-347e-4ac5-8104-5eebf0e9ec48', '5598ff90-469e-4e77-a376-4f1ce9f42034');
+insert into MANAGEMENT_USER_ROLE values ('52ce77d3-347e-4ac5-8104-5eebf0e9ec48', 'c2b95591-e5fc-45ad-bf85-e0384fbf5b5c');
+insert into MANAGEMENT_USER_ROLE values ('ce3c98c4-46a5-4ddb-a5ca-3d3cfa3ab07e', 'c2b95591-e5fc-45ad-bf85-e0384fbf5b5c');

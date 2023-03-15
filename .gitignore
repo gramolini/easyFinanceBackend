@@ -4,8 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /dockerComposeFiles/database/pgdata
-!**/dockerComposeFiles/dockerComposeFiles/jenkins/jenkins-data/
-!**/dockerComposeFiles/dockerComposeFiles/jenkins/jenkins-docker-certs/
 
 ### STS ###
 .apt_generated
@@ -34,5 +32,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/dockerComposeFiles/jenkins/jenkins-data/
-/dockerComposeFiles/jenkins/jenkins-docker-certs/

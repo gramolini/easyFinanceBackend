@@ -2,7 +2,7 @@ version: "3.8"
 services:
   jenkins:
     container_name: "Jenkins"
-    restart: "on-failure"
+#    restart: "on-failure"
     image: "jenkins/jenkins:jdk11"
     ports:
       - "8080:8080"

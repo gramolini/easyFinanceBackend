@@ -7,6 +7,6 @@ services:
     volumes:
       - ./pgdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=admin
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=fmfadb2023
       - POSTGRES_DB=financeManagerForAllDB
