@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image "maven:3.9.0-eclipse-temurin-19"
+            image "maven:3.9.0-eclipse-temurin-19-focal"
             label "docker"
         }
     }
