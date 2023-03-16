@@ -1,26 +1,34 @@
 pipeline {
     agent any
-    options {
-        timeout(time: 15, unit: 'SECONDS')
-    }
     stages {
-        stage('Cloning repository') {
+//         tools {
+//             maven 'MAVEN'
+//         }
+//         stage('Checking out the repository') {
+//             steps {
+//                 checkout scmGit(branches:
+//                     [[name: '${BRANCH_NAME}']], extensions: [], userRemoteConfigs:
+//                     [[credentialsId: 'de46b8ff-a9cc-4c6d-8b62-f6911ee7b0a3',
+//                     url: 'https://github.com/gramolini/financeManagerForAllBackend.git']]
+//                 )
+//             }
+//         }
+        stage('Build') {
             steps {
-                bat 'rmdir financeManagerForAllBackend'
-                bat 'git clone https://github.com/gramolini/financeManagerForAllBackend.git'
+                bat 'mvn -version'
+                bat 'mvn clean install'
             }
         }
-        stage('Building') {
-            steps {
-                bat 'cd financeManagerForAllBackend'
-                bat 'mvn clean'
-                bat 'mvn package'
-            }
-        }
-        stage('Sending to cloud') {
-            steps {
-                bat 'mvn dockerfile:push'
-            }
+//         stage('Sending to cloud') {
+//             steps {
+//                 bat 'mvn dockerfile:push'
+//             }
+//         }
+    }
+
+    post {
+        always {
+            cleanWs()
         }
     }
 }
