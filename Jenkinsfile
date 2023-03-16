@@ -8,7 +8,7 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
-        stage('Sending to cloud') {
+        stage('Send image to Docker Hub') {
             steps {
                 bat 'mvn dockerfile:push'
             }
