@@ -8,11 +8,11 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
-//         stage('Sending to cloud') {
-//             steps {
-//                 bat 'mvn dockerfile:push'
-//             }
-//         }
+        stage('Sending to cloud') {
+            steps {
+                bat 'mvn dockerfile:push'
+            }
+        }
     }
 
     post {
