@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image "maven:latest"
+            label "docker"
+        }
+    }
     stages {
-//         tools {
-//             maven 'MAVEN'
-//         }
 //         stage('Checking out the repository') {
 //             steps {
 //                 checkout scmGit(branches:
