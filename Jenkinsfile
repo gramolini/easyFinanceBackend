@@ -11,13 +11,13 @@ pipeline {
         }
         stage('Building') {
             steps {
-                bat './mvn clean'
-                bat './mvn package'
+                bat 'mvn clean'
+                bat 'mvn package'
             }
         }
         stage('Sending to cloud') {
             steps {
-                bat './mvn dockerfile:push'
+                bat 'mvn dockerfile:push'
             }
         }
     }
