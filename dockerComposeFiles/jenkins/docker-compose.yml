@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  jenkins:
+    container_name: "Jenkins"
+    #    restart: "on-failure"
+    image: "jenkins/jenkins:jdk11"
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins-data:/var/jenkins_home
+      - ./jenkins-docker-certs:/certs/client:ro
+    environment:
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_CERT_PATH=/certs/client
+      - DOCKER_TLS_VERIFY=1
