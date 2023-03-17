@@ -34,4 +34,4 @@ The following guides illustrate how to use some features concretely:
 ### Containers
 - PostgreSQL: dockerComposeFiles/database/docker-compose.yml
 - Jenkins: dockerComposeFiles/jenkins/docker-compose.yml
-    - Guide: https://www.jenkins.io/doc/book/installing/docker/
+  - Guide: https://www.jenkins.io/doc/book/installing/docker/
